@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plant Identification Result</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">PlantPedia</div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="scan.html">Scan</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <h1>Plant Identification Result</h1>
+            <div id="result" class="result-container">
+                <img id="plant-image" src="" alt="Identified Plant" class="result-image">
+                <div class="result-info">
+                    <h2>Name: <span id="plant-name"></span></h2>
+                    <p><strong>Info:</strong> <span id="plant-info"></span></p>
+                    <p><strong>Medicinal Use:</strong> <span id="plant-medicinal-use"></span></p>
+                    <p><strong>Meaning of the Plant:</strong> <span id="plant-meaning"></span></p>
+                </div>
+            </div>
+            <a href="scan.html" class="cta-button">Scan Another Plant</a>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

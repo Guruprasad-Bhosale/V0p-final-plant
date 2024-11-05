@@ -1,0 +1,417 @@
+:root {
+    --primary-color: #4CAF50;
+    --secondary-color: #45a049;
+    --background-color: #f0f7f0;
+    --text-color: #333;
+    --accent-color: #8bc34a;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--background-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    transition: opacity 0.5s ease-out;
+}
+
+.loader .leaf {
+    width: 50px;
+    height: 50px;
+    background-color: var(--primary-color);
+    border-radius: 0 50% 50% 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+header {
+    background-color: var(--primary-color);
+    padding: 1rem 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+}
+
+nav ul li {
+    margin-left: 1rem;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    color: var(--accent-color);
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+.hero {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: var(--secondary-color);
+}
+
+.image-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.image-container a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.image-container img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.image-container img:hover {
+    transform: scale(1.05);
+}
+
+.image-container p {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.about {
+    text-align: center;
+}
+
+.about h1 {
+    margin-bottom: 1rem;
+}
+
+.about p {
+    max-width: 800px;
+    margin: 0 auto 2rem;
+}
+
+.developer-cards {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.developer-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    max-width: 300px;
+}
+
+.developer-card:hover {
+    transform: translateY(-5px);
+}
+
+.developer-card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+.developer-card h3 {
+    margin-bottom: 0.5rem;
+}
+
+.developer-card p {
+    margin-bottom: 1rem;
+}
+
+.github-link {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.github-link:hover {
+    background-color: var(--secondary-color);
+}
+
+.scan {
+    text-align: center;
+}
+
+.scan h1 {
+    margin-bottom: 1rem;
+}
+
+.scan p {
+    margin-bottom: 2rem;
+}
+
+.file-upload {
+    margin-bottom: 1rem;
+}
+
+.file-upload input[type="file"] {
+    display: none;
+}
+
+.file-upload label {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.file-upload label:hover {
+    background-color: var(--secondary-color);
+}
+
+.upload-icon {
+    margin-right: 0.5rem;
+}
+
+.submit-button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: var(--secondary-color);
+}
+
+.result {
+    text-align: center;
+}
+
+.result h1 {
+    margin-bottom: 2rem;
+}
+
+.plant-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.plant-images {
+    flex: 1;
+    max-width: 500px;
+}
+
+.main-image {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.thumbnail-images {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.thumbnail-images img {
+    width: calc(25% - 0.375rem);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.thumbnail-images img:hover {
+    opacity: 0.8;
+}
+
+.plant-details {
+    flex: 1;
+    max-width: 500px;
+    text-align: left;
+}
+
+.plant-details h2 {
+    margin-bottom: 1rem;
+}
+
+.plant-details p {
+    margin-bottom: 1rem;
+}
+
+.result-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.result-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.result-info {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+}
+
+.result-info h2 {
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+}
+
+.result-info p {
+    margin-bottom: 1rem;
+}
+
+.result-info strong {
+    color: var(--secondary-color);
+}
+
+.image-preview-container {
+    display: none;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.image-preview {
+    max-width: 100%;
+    max-height: 300px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.loading {
+    display: none;
+    text-align: center;
+    margin-top: 1rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.error {
+    display: none;
+    text-align: center;
+    margin-top: 1rem;
+    color: red;
+    font-weight: bold;
+}
+
+@media (min-width: 768px) {
+    .result-container {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .result-image {
+        max-width: 50%;
+    }
+
+    
+
+    .result-info {
+        flex: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .plant-info {
+        flex-direction: column;
+    }
+
+    .plant-images,
+    .plant-details {
+        max-width: 100%;
+    }
+}

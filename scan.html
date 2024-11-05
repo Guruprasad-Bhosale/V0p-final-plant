@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scan Plant</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">PlantPedia</div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="scan.html" class="active">Scan</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <h1>Scan Plant</h1>
+            <form id="upload-form" enctype="multipart/form-data">
+                <div class="file-upload">
+                    <label for="file-input">
+                        <span class="upload-icon">📁</span>
+                        Choose File
+                    </label>
+                    <input type="file" id="file-input" name="file" accept="image/*" required>
+                </div>
+                <div id="image-preview-container" class="image-preview-container">
+                    <img id="image-preview" src="" alt="Image preview" class="image-preview">
+                </div>
+                <button type="submit" class="submit-button">Upload and Identify</button>
+            </form>
+            <div id="loading" class="loading">Identifying plant...</div>
+            <div id="error" class="error"></div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
